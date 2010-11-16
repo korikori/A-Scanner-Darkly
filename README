@@ -1,0 +1,10 @@
+ABOUT
+This is A Scanner Darkly, a script that processes cpanel's server stats. It is custom-built for our company and might not fit your needs, but it could give you a hint. It's still unlicensed (we're lazy), but consider it GPL for the time being.
+
+It currently consists of three small scripts:
+splitter.sh, a bash/awk script that divides a page with all of our servers' logfiles into separate logs for each server. It was designed and coded by Vladimir 'morbeo' Kirov;
+ascannerdarkly.pl, a perl script written that takes the logs for each server and checks them for different predefined values for outgoing and incoming mail, domain hits and bandwidth. It was designed and coded by Stanimir 'kori' Djevelekov;
+asd.sh, a bash script that combines the two scripts above for ease of use.
+
+USAGE
+Simple usage: run "sh asd.sh" 
