@@ -7,4 +7,4 @@ ascannerdarkly.pl, a perl script written that takes the logs for each server and
 asd.sh, a bash script that combines the two scripts above for ease of use.
 
 USAGE
-Simple usage: run "sh asd.sh" 
+Simple usage: 1) copy the full page of server logs into import.txt and 2) then run "$sh asd.sh" in a terminal
