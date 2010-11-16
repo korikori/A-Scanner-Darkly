@@ -54,16 +54,28 @@ while ($file = readdir DH) { #here's where dragons breathe fire on mortals so ju
 	open OUTPUT, '>', "output.txt" or die $!;
 	STDOUT->fdopen( \*OUTPUT, 'w' ) or die $!;
 	print "Server stats for $date\n\n";
+	if (@SpamFirst) {
 	print "\nSpammers - First notice:\n";
 	print @SpamFirst;
+	}
+	if (@SpamSuspend) {
 	print "\nSpammers - Suspend:\n";
 	print @SpamSuspend;
+	}
+	if (@HitsFirst) {
 	print "\nExcessive load - domain hits - First notice:\n";
 	print @HitsFirst;
+	}
+	if (@HitsSuspend) {
 	print "\nExcessive load - domain hits - Suspend:\n";
 	print @HitsSuspend;
+	}
+	if (@BandwidthFirst) {
 	print "\nExcessive load - bandwidth - First notice:\n";
 	print @BandwidthFirst;
+	}
+	if (@BandwidthSuspend) {
 	print "\nExcessive load - bandwidth - Suspend:\n";
 	print @BandwidthSuspend;
+	}
 	close OUTPUT or die "can't close output.txt: $!";

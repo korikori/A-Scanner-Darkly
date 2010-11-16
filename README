@@ -1,6 +1,6 @@
 ABOUT
 
-This is A Scanner Darkly, a script that processes cpanel's server stats. It is custom-built for our company and might not fit your needs, but it could give you hints to solving a fairly common problem. Consider it GPL for the sake of stuff, we're too lazy to download a copy of the license to include.
+This is A Scanner Darkly, a script that processes cpanel's server stats. It is custom-built for our company and might not fit your needs, but it could give you hints to solving a fairly common problem. After we finished being so lazy, we published it under GPL v3 license which is included with this release in the file COPYING and for the sake of that, this file is now 100% Copyright 2010 Vladimir Kirov, Stanimir Djevelekov.
 
 It currently consists of these three very small scripts:
 
@@ -15,3 +15,22 @@ It should run in any environment which supports the above three languages, while
 USAGE
 
 Simple usage: 1) copy the full page of server logs into import.txt 2) then run "$sh asd.sh" in a terminal 3) see the output in output.txt
+
+Make sure you have set asd.sh to executable ($chmod +x asd.sh) before you execute it.
+
+GPL STUFF
+
+This file is part of A Scanner Darkly.
+
+A Scanner Darkly is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+A Scanner Darkly is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with A Scanner Darkly.  If not, see <http://www.gnu.org/licenses/>.
