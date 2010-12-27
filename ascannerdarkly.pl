@@ -1,5 +1,22 @@
 #!/usr/local/bin/perl
 #beware of false positives
+#
+#Copyright 2010 Stanimir Djevelekov
+#
+#This file is part of A Scanner Darkly.
+#
+#A Scanner Darkly is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#
+#A Scanner Darkly is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#
+#You should have received a copy of the GNU General Public License
+#along with A Scanner Darkly.  If not, see <http://www.gnu.org/licenses/>.
 use IO::Handle;
 
 $dir = "reports";
@@ -37,7 +54,7 @@ while ($file = readdir DH) { #here's where dragons breathe fire on mortals so ju
 			}
 		}
 	    }
-	    if (m/\sBandwidth\s/ix .. m/\susage\s/ix) { #check for bandwidth. these show up twice in the output report
+	    if (m/\sbandwidth\s/ix .. m/\susage\s/ix) { #check for bandwidth. these show up twice in the output report
 		foreach $w (split) {
 			if($w =~ m/^[0-9]+$/ and int($w) > 4999 and int($w) < 10000) {
 				push (@BandwidthFirst, "$file: $.: $_");
