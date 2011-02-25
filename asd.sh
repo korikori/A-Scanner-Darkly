@@ -1,17 +1,27 @@
 #!/bin/bash
-# 1 PASSED VALUE IS THE LOGFILE
-logrotate() # Logrotate function
+# 1st PASSED VALUE IS THE LOGFILE
+cleaner() # Clean the reports folder and remove old output.txt 
 {
-TMS=`date +%m%d%Y`
-NEWDTF=$1$TMS.txt
+rm -f reports/* 	# Clean server files
+rm -f output.txt 	# Clean old output
+rm -f bigfilex.html	# Clean old big files
+}
+logrotate() 	# Logrotate function
+{
+TMS=`date +%m%d%Y` 	# Logrotate timestamp
+NEWDTF=report$TMS.txt 	# Rotated log filename
+#	echo -e $NEWDTF
 	cp $1 ./logs/$NEWDTF
 }
-echo -e "Hello" $USER", How are you?"
+echo -e "A Scanner Darkly Wrapup Script"
+echo -e "Cleaning old mess"
+cleaner
+echo -e "Rotating files like its cool"
 logrotate $1
-echo -e "Splitting the logfile"
+echo -e "Karate chop the log"
 sh splitter.sh $1
-echo -e "Splitting done"
-echo -e "Running A Scanner Darkly"
-perl ascannerdarkly.pl
+echo -e "Killer scripts done, removing the evidence" # Removing the input file, remember there's backup in logs/
 rm $1
-echo -e "Done!"
+echo -e "Running a wild Scanner Darkly"
+perl ascannerdarkly.pl
+echo -e "Done, muthafuka!"
