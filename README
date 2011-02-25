@@ -12,6 +12,8 @@ asd.sh, a bash script that combines the two scripts above for ease of use. It al
 
 It should run in any environment which supports the above three languages, while it was designed and tested in Linux.
 
+It has been named after the BSFA Award winning 1977 science fiction novel by American writer Phillip K. Dick.
+
 USAGE
 
 Simple usage: 1) copy the full page of server logs into import.txt (or any empty file of your choice) 2) then run "$sh asd.sh import.txt" in a terminal 3) see the output in output.txt. The contents of the import.txt will be automatically copied into the LOGS folder with the date in it's filename for future reference.
