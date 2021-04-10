@@ -1,12 +1,12 @@
 ABOUT
 
-This is A Scanner Darkly, a script that processes cpanel's server stats. It is custom-built for our company and might not fit your needs, but it could give you hints to solving a fairly common problem. After we finished being so lazy, we published it under GPL v3 license which is included with this release in the file COPYING and for the sake of that, this file is now 100% Copyright 2010-2011 Vladimir Kirov, Stanimir Djevelekov.
+This is A Scanner Darkly, a script that processes cpanel's server stats. It is custom-built for our company and might not fit your needs, but it could give you hints to solving a fairly common problem. After we finished being so lazy, we published it under GPL v3 license which is included with this release in the file COPYING and for the sake of that, this file is now 100% Copyright 2010-2011 morbeo, korikori.
 
 It currently consists of these three very small scripts:
 
-splitter.sh, a bash/awk script that divides a page with all of our servers' logs into separate logfiles for each server. It was designed and coded by Vladimir Kirov;
+splitter.sh, a bash/awk script that divides a page with all of our servers' logs into separate logfiles for each server. It was designed and coded by morbeo;
 
-ascannerdarkly.pl, a perl script that takes the logs for each server and checks them for different predefined values for outgoing and incoming mail, domain hits and bandwidth. It then outputs the violating accounts in one file and the processed big files in another. It was designed and coded by Stanimir Djevelekov;
+ascannerdarkly.pl, a perl script that takes the logs for each server and checks them for different predefined values for outgoing and incoming mail, domain hits and bandwidth. It then outputs the violating accounts in one file and the processed big files in another. It was designed and coded by korikori;
 
 asd.sh, a bash script that combines the two scripts above for ease of use. It also asks the user how they feel, which is always nice.
 
