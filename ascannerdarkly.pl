@@ -1,7 +1,7 @@
 #!/usr/local/bin/perl
 #beware of false positives
 #
-#Copyright 2010-2011 Stanimir Djevelekov
+#Copyright 2010-2011 Prehistoric Dog
 #
 #This file is part of A Scanner Darkly.
 #
